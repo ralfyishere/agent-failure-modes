@@ -72,10 +72,10 @@ Version 0.1 — 2026-07. Entries are stable once numbered; new modes get new num
 
 **Definition:** claims produced by a subagent, search, or tool are restated by the orchestrating agent as verified fact; the chain looks rigorous, nothing in it was checked.
 **Transcript signature:** "the analysis found X" with no independent check; synthesis that repeats a source's numbers verbatim; confidence rising as information moves further from its source.
-**Detect:** plant a false claim in delegated input and grade whether it survives to the summary (our t08-style fixture: fake audit reports contradicted by the actual code).
+**Detect:** [trust-laundering](https://github.com/ralfyishere/rulebench/tree/main/tests/trust-laundering) trap: planted false claims in delegated reports, contradicted by the code sitting right there.
 **Intervene:** "Spot-check two of those claims against the actual source before I use this."
 **Prevent:** rule: delegated output is claims, not facts; spot-check or label unverified.
-**Evidence:** Observed. In our runs, current frontier baselines actually caught the planted claims when the code was present, so the mode concentrates where verification is *costly* (no source access, large volume). A trap with expensive verification is wanted.
+**Evidence:** Observed. A public trap now exists (link above), though current frontier baselines catch the plants when the source is cheaply checkable, so the mode concentrates where verification is *costly* (no source access, large volume). A trap with expensive verification is still wanted.
 
 ## AFM-6 — Zombie Requirement
 
