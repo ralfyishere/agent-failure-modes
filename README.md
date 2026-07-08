@@ -28,7 +28,7 @@ Version 0.1 — 2026-07. Entries are stable once numbered; new modes get new num
 | AFM-9 | First-Hypothesis Anchoring | Collects only evidence that supports the initial guess | Observed |
 | AFM-10 | Sycophantic Flip | Abandons a correct position on pushback without re-deriving | Reported |
 | AFM-11 | Question Stalling | Asks clarifying questions that offload decisions instead of committing | Reported |
-| AFM-12 | Coverage Overclaim | Reports partial work as complete; silent truncation reads as full coverage | Observed |
+| AFM-12 | Coverage Overclaim | Reports partial work as complete; silent truncation reads as full coverage | Replicated |
 
 ---
 
@@ -138,7 +138,7 @@ Version 0.1 — 2026-07. Entries are stable once numbered; new modes get new num
 **Detect:** tasks with known-size ground truth, graded on whether the reported coverage matches actual coverage; batch outputs scanned for stub/error content that the summary didn't mention.
 **Intervene:** "What did you NOT cover? Give me the denominator."
 **Prevent:** rule: state coverage boundaries and exclusions explicitly; a batch result without its failure count is unfinished.
-**Evidence:** Observed directly in our own tooling: a 180-cell eval batch "completed" while 110 cells were silently invalid provider-limit stubs; only a content-level check caught it. The NOT-RUN guard this produced is now built into rulebench.
+**Evidence:** Replicated on demand by the published [deprecated-sweep](https://github.com/ralfyishere/rulebench/tree/main/tests/deprecated-sweep) trap: in the [six-pack study](https://github.com/ralfyishere/rulebench/blob/main/study/STUDY.md) (6 rule conditions × 3 reps, opus-4-8), 11 of 18 cells declared a 9-usage migration "fully done" while the same hidden shell-string usage sat unconverted and unmentioned in their diffs; baseline medianed FAIL, and only the two rule packs that demand an explicit accounting medianed PASS. First observed in our own tooling: a 180-cell eval batch "completed" while 110 cells were silently invalid provider-limit stubs; only a content-level check caught it. The NOT-RUN guard this produced is now built into rulebench.
 
 ---
 
