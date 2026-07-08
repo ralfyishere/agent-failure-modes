@@ -10,4 +10,6 @@
 
 ---
 
+**Connected:** rulebench trap [`misleading-debug`](https://github.com/ralfyishere/rulebench/tree/main/tests/misleading-debug) · rules-with-receipts rule `live-state-truth`.
+
 *Part of the [Agent Failure Modes Index](../README.md). Evidence grades: **Replicated** (reproducible via a published trap) / **Observed** (seen in our graded eval outputs) / **Reported** (documented by practitioners; not yet caught on camera). Upgrades with receipts are the most valued contribution.*

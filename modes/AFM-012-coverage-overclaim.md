@@ -10,4 +10,6 @@
 
 ---
 
+**Connected:** rulebench trap [`deprecated-sweep`](https://github.com/ralfyishere/rulebench/tree/main/tests/deprecated-sweep) · rules-with-receipts rule `verification-discipline`.
+
 *Part of the [Agent Failure Modes Index](../README.md). Evidence grades: **Replicated** (reproducible via a published trap) / **Observed** (seen in our graded eval outputs) / **Reported** (documented by practitioners; not yet caught on camera). Upgrades with receipts are the most valued contribution.*
