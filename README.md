@@ -160,6 +160,7 @@ New modes need: a name, a crisp definition distinct from existing entries, a tra
 
 - [rules-with-receipts](https://github.com/ralfyishere/rules-with-receipts): a rules pack that prevents several of these, with published eval evidence
 - [rulebench](https://github.com/ralfyishere/rulebench): run detection traps against your own rules setup
+- [agent-zero-trust](https://github.com/ralfyishere/agent-zero-trust): zero-trust repo intake — scan the instruction environment before an agent enters (several AFM modes begin as injected instructions)
 - [vectara/awesome-agent-failures](https://github.com/vectara/awesome-agent-failures): a curated list of real-world agent failure incidents (complementary: incidents there, taxonomy here)
 
 ## License
