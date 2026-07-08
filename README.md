@@ -1,25 +1,40 @@
 # The Agent Failure Modes Index (AFM)
 
-**A numbered taxonomy of the ways AI coding agents fail — each with a transcript signature, a detection trap, an intervention, a prevention rule, and an evidence grade.**
+**A numbered taxonomy of the ways AI coding agents fail — each with a transcript signature, a
+detection trap, an intervention, a prevention rule, and an evidence grade.**
 
-Everyone who works with coding agents knows these failures by feel. This index gives them names and numbers so bug reports, evals, and rules files can point at the same thing. Modeled on what OWASP did for web vulnerabilities: name it, number it, show how to detect and prevent it.
+Everyone who works with coding agents knows these failures by feel. This index gives them names
+and numbers so bug reports, evals, and rules files can point at the same thing. Modeled on what
+OWASP did for web vulnerabilities: name it, number it, show how to detect and prevent it.
 
 Two things make this index different from a listicle:
 
-1. **Evidence grades.** Every mode is labeled: **Replicated** (we reproduce it on demand with a published trap test), **Observed** (seen in our own graded eval outputs, not yet reliably reproducible), or **Reported** (widely described by practitioners; we haven't caught it on camera yet). We do not present vibes as data.
-2. **Reproduction traps.** Where a mode is Replicated, the entry links a runnable trap test ([rulebench](https://github.com/ralfyishere/rulebench) format) so you can test your own setup.
+1. **Evidence grades.** Every mode is labeled: **Replicated** (we reproduce it on demand with a
+   published trap test), **Observed** (seen in our own graded eval outputs, not yet reliably
+   reproducible), or **Reported** (widely described by practitioners; we haven't caught it on
+   camera yet). We do not present vibes as data.
+2. **Reproduction traps.** Where a mode is Replicated, the entry links a runnable trap test
+   ([rulebench](https://github.com/ralfyishere/rulebench) format) so you can test your own
+   setup.
 
-Version 0.2 — 2026-07 (entries split into linkable per-mode pages; content unchanged). Entries are stable once numbered; new modes get new numbers. Sources for evidence claims: the graded eval outputs in [rules-with-receipts](https://github.com/ralfyishere/rules-with-receipts) (raw session outputs included).
+Version 0.2 — 2026-07 (entries split into linkable per-mode pages; content unchanged). Entries
+are stable once numbered; new modes get new numbers. Sources for evidence claims: the graded
+eval outputs in [rules-with-receipts](https://github.com/ralfyishere/rules-with-receipts) (raw
+session outputs included).
 
 ---
 
 ## The five you'll see this week
 
 1. **[AFM-1 Phantom Success](modes/AFM-001-phantom-success.md)** — "All tests pass" (nothing was run).
-2. **[AFM-12 Coverage Overclaim](modes/AFM-012-coverage-overclaim.md)** — "Fully migrated" (the ninth usage sits in a shell string, untouched and unmentioned).
-3. **[AFM-2 Scope Vandalism](modes/AFM-002-scope-vandalism.md)** — you asked for a flag; the diff also "cleaned up" three functions.
-4. **[AFM-5 Trust Laundering](modes/AFM-005-trust-laundering.md)** — a subagent's guess arrives in the summary as verified fact.
-5. **[AFM-3 Swallowed Finding](modes/AFM-003-swallowed-finding.md)** — it noticed the real bug next door and told no one.
+2. **[AFM-12 Coverage Overclaim](modes/AFM-012-coverage-overclaim.md)** — "Fully migrated" (the
+   ninth usage sits in a shell string, untouched and unmentioned).
+3. **[AFM-2 Scope Vandalism](modes/AFM-002-scope-vandalism.md)** — you asked for a flag; the
+   diff also "cleaned up" three functions.
+4. **[AFM-5 Trust Laundering](modes/AFM-005-trust-laundering.md)** — a subagent's guess arrives
+   in the summary as verified fact.
+5. **[AFM-3 Swallowed Finding](modes/AFM-003-swallowed-finding.md)** — it noticed the real bug
+   next door and told no one.
 
 Each page carries the transcript signature, detection trap, and intervention phrase.
 
@@ -43,18 +58,27 @@ Each page carries the transcript signature, detection trap, and intervention phr
 
 ---
 
-Each mode has its own page under [`modes/`](modes/) — full definition, transcript signature, detection, intervention, prevention, and evidence.
+Each mode has its own page under [`modes/`](modes/) — full definition, transcript signature,
+detection, intervention, prevention, and evidence.
 
 ## Contributing
 
-New modes need: a name, a crisp definition distinct from existing entries, a transcript signature, and evidence (a graded transcript or a reproducible trap; links to public incidents accepted for Reported grade). Evidence upgrades (Reported → Observed → Replicated) are as valuable as new entries: bring a trap that reproduces a mode and the entry gets your trap linked. Same house rule as the sibling repos: no claims without receipts.
+New modes need: a name, a crisp definition distinct from existing entries, a transcript
+signature, and evidence (a graded transcript or a reproducible trap; links to public incidents
+accepted for Reported grade). Evidence upgrades (Reported → Observed → Replicated) are as
+valuable as new entries: bring a trap that reproduces a mode and the entry gets your trap
+linked. Same house rule as the sibling repos: no claims without receipts.
 
 ## Related
 
-- [rules-with-receipts](https://github.com/ralfyishere/rules-with-receipts): a rules pack that prevents several of these, with published eval evidence
+- [rules-with-receipts](https://github.com/ralfyishere/rules-with-receipts): a rules pack that
+  prevents several of these, with published eval evidence
 - [rulebench](https://github.com/ralfyishere/rulebench): run detection traps against your own rules setup
-- [agent-zero-trust](https://github.com/ralfyishere/agent-zero-trust): zero-trust repo intake — scan the instruction environment before an agent enters (several AFM modes begin as injected instructions)
-- [vectara/awesome-agent-failures](https://github.com/vectara/awesome-agent-failures): a curated list of real-world agent failure incidents (complementary: incidents there, taxonomy here)
+- [agent-zero-trust](https://github.com/ralfyishere/agent-zero-trust): zero-trust repo intake —
+  scan the instruction environment before an agent enters (several AFM modes begin as injected
+  instructions)
+- [vectara/awesome-agent-failures](https://github.com/vectara/awesome-agent-failures): a curated
+  list of real-world agent failure incidents (complementary: incidents there, taxonomy here)
 
 ## License
 
