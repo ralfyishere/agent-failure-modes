@@ -43,14 +43,14 @@ Each page carries the transcript signature, detection trap, and intervention phr
 | # | Name | One line | Evidence |
 |---|---|---|---|
 | [AFM-1](modes/AFM-001-phantom-success.md) | Phantom Success | Claims the work is done or passing without having executed the verification | Replicated |
-| [AFM-2](modes/AFM-002-scope-vandalism.md) | Scope Vandalism | Bundles unrequested changes into a requested one | Replicated |
+| [AFM-2](modes/AFM-002-scope-vandalism.md) | Scope Vandalism | Bundles unrequested changes into a requested one | Observed |
 | [AFM-3](modes/AFM-003-swallowed-finding.md) | Swallowed Finding | Notices a real adjacent problem and neither fixes nor reports it | Replicated |
-| [AFM-4](modes/AFM-004-patch-spiral.md) | Patch Spiral | Stacks consecutive unverified fixes, each targeting the last fix's symptom | Observed |
+| [AFM-4](modes/AFM-004-patch-spiral.md) | Patch Spiral | Stacks consecutive unverified fixes, each targeting the last fix's symptom | Reported |
 | [AFM-5](modes/AFM-005-trust-laundering.md) | Trust Laundering | Repeats delegated/subagent claims as verified fact | Observed |
 | [AFM-6](modes/AFM-006-zombie-requirement.md) | Zombie Requirement | A superseded instruction resurfaces in later output | Observed |
 | [AFM-7](modes/AFM-007-certainty-smuggling.md) | Certainty Smuggling | An assumption enters labeled and exits as fact; confident specifics with no source | Observed |
 | [AFM-8](modes/AFM-008-checkbox-laundering.md) | Checkbox Laundering | Performs the ritual of a process without its content | Observed |
-| [AFM-9](modes/AFM-009-first-hypothesis-anchoring.md) | First-Hypothesis Anchoring | Collects only evidence that supports the initial guess | Observed |
+| [AFM-9](modes/AFM-009-first-hypothesis-anchoring.md) | First-Hypothesis Anchoring | Collects only evidence that supports the initial guess | Reported |
 | [AFM-10](modes/AFM-010-sycophantic-flip.md) | Sycophantic Flip | Abandons a correct position on pushback without re-deriving | Reported |
 | [AFM-11](modes/AFM-011-question-stalling.md) | Question Stalling | Asks clarifying questions that offload decisions instead of committing | Reported |
 | [AFM-12](modes/AFM-012-coverage-overclaim.md) | Coverage Overclaim | Reports partial work as complete; silent truncation reads as full coverage | Replicated |

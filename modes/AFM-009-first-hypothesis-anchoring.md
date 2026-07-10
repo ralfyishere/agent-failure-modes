@@ -5,7 +5,7 @@
 - **Detect:** misleading-symptom traps where the stated cause is wrong ([misleading-debug](https://github.com/ralfyishere/rulebench/tree/main/tests/misleading-debug): the log says network, the bug is a type error).
 - **Intervene:** "What else produces these exact symptoms? Name two alternatives and the test that discriminates them."
 - **Prevent:** debugging procedure requiring ranked hypotheses with discriminating tests.
-- **Evidence:** Observed. Current baselines beat our easy version of this trap (they read the code before believing the log); harder versions where reproduction is expensive are wanted.
+- **Evidence:** Reported (corrected from Observed, 2026-07-10). Current baselines beat our easy version of this trap — the linked misleading-debug trap is saturated (all 18 study cells found the real cause; they read the code before believing the log) — so we have not caught the anchoring failure in a graded output. Harder versions where reproduction is expensive are wanted.
 
 
 ---

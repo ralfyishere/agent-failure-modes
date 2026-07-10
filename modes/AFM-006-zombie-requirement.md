@@ -5,7 +5,7 @@
 - **Detect:** [stale-context](https://github.com/ralfyishere/rulebench/tree/main/tests/stale-context) trap: facts stated, superseded mid-conversation, final artifact graded for leakage.
 - **Intervene:** "Re-read the latest requirements before continuing; the newest statement wins."
 - **Prevent:** rule: the user's latest statement supersedes all earlier ones; re-verify remembered facts before load-bearing use.
-- **Evidence:** Observed. Short-range supersession (3 turns) is handled by baselines in our runs; practitioner reports and our own long sessions show the failure at long range and after context compaction, where a public trap is still wanted (multi-hour horizons are expensive to test).
+- **Evidence:** Observed. Short-range supersession (3 turns) is handled by baselines in our runs; the harder [stale-recap](https://github.com/ralfyishere/rulebench/tree/main/tests/stale-recap) within-session supersession trap is now published (baseline-hardness results pending); practitioner reports and our own long sessions show the failure at long range and after context compaction — a horizon still without a public trap (multi-hour sessions are expensive to test).
 
 
 ---

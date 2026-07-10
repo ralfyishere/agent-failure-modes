@@ -5,7 +5,7 @@
 - **Detect:** rubrics that require claims labeled by evidence level and arithmetic shown; graded against whether confidence language tracks verification.
 - **Intervene:** "Label each claim fact, inference, assumption, or guess, and recompute the arithmetic showing your work."
 - **Prevent:** claim-labeling rule in always-on context.
-- **Evidence:** Observed (v1 evals: correct analyses delivered with unlabeled uncertainty and deferred corrections). A dedicated smuggling trap (long deliverable, assumption planted early) is wanted.
+- **Evidence:** Observed (v1 evals: correct analyses delivered with unlabeled uncertainty and deferred corrections). The [assumption-carry](https://github.com/ralfyishere/rulebench/tree/main/tests/assumption-carry) trap (an unverified assumption planted early and carried forward through a long deliverable) is now published; it has not yet passed the baseline-hardness check that admits a trap to the study, so it does not yet lift this to Replicated.
 
 
 ---
