@@ -1,0 +1,13 @@
+# AFM-16 — Hallucinated Dependency
+
+- **Definition:** the agent invokes something that does not exist — a package it imports and "installs", a library function, a method, a CLI flag, an API endpoint, or a config key — confidently and with plausible naming. At best it errors on run; at worst the nonexistent package name is registrable by an attacker (*slopsquatting*), turning a hallucination into a supply-chain foothold. Distinct from AFM-7 Certainty Smuggling (there an unverified assumption about the *world* hardens into stated fact; here a specific technical *artifact* is fabricated) and AFM-1 Phantom Success (the code may genuinely run right up to the point the phantom symbol is reached).
+- **Transcript signature:** an `import` / `require` / `pip install` / `npm i` of a package that isn't a real dependency; calls to methods, flags, or endpoints absent from the actual API ("use `client.fetch_all()`", "pass `--parallel`"); citing a config option or env var the tool doesn't read; confident code referencing names that were never defined or imported.
+- **Detect:** resolve every external symbol against the *real* package or API — does the import exist on the index, the method in the installed version, the flag in `--help`? A trap: a task whose obvious solution invites a plausible-but-nonexistent API, where PASS requires using only verifiable symbols (or checking first). (Trap wanted; [agent-zero-trust](https://github.com/ralfyishere/agent-zero-trust)'s supply-chain-adjacent checks are related but scan the instruction environment, not generated code.)
+- **Intervene:** "Confirm that package / function / flag exists in the version we use — show the import resolving or the docs, not your recollection."
+- **Prevent:** rule: external packages, APIs, and flags are verified against the installed version or the index before use, never recalled; a name you cannot resolve is treated as unknown, not assumed. Pin and check dependencies so a hallucinated package cannot be silently installed.
+- **Evidence:** Reported — extensively documented (LLM package-hallucination / "slopsquatting" research through 2025–2026; nonexistent-API and phantom-flag reports are a daily practitioner experience). No published graded trap; the upgrade path is a rulebench trap that plants a plausible nonexistent API and grades whether the agent invents it or verifies first — bring one and it gets linked here, credited.
+
+
+---
+
+*Part of the [Agent Failure Modes Index](../README.md). Evidence grades: **Replicated** (reproducible via a published trap) / **Observed** (seen in our graded eval outputs) / **Reported** (documented by practitioners; not yet caught on camera). Upgrades with receipts are the most valued contribution.*

@@ -17,8 +17,10 @@ Two things make this index different from a listicle:
    ([rulebench](https://github.com/ralfyishere/rulebench) format) so you can test your own
    setup.
 
-Version 0.2 — 2026-07 (entries split into linkable per-mode pages; content unchanged). Entries
-are stable once numbered; new modes get new numbers. Sources for evidence claims: the graded
+Version 0.3 — 2026-07 (added AFM-14 Test Gaming, AFM-15 Destructive Overreach, AFM-16
+Hallucinated Dependency; evidence grades reviewed against the six-pack study — three graded
+down toward their evidence, dated in the entries). v0.2 split entries into linkable per-mode
+pages. Entries are stable once numbered; new modes get new numbers. Sources for evidence claims: the graded
 eval outputs in [rules-with-receipts](https://github.com/ralfyishere/rules-with-receipts) (raw
 session outputs included).
 
@@ -55,6 +57,9 @@ Each page carries the transcript signature, detection trap, and intervention phr
 | [AFM-11](modes/AFM-011-question-stalling.md) | Question Stalling | Asks clarifying questions that offload decisions instead of committing | Reported |
 | [AFM-12](modes/AFM-012-coverage-overclaim.md) | Coverage Overclaim | Reports partial work as complete; silent truncation reads as full coverage | Replicated |
 | [AFM-13](modes/AFM-013-injection-compliance.md) | Injection Compliance | Obeys instructions embedded in working material (repo files, tickets, tool output) as if they came from the principal | Reported |
+| [AFM-14](modes/AFM-014-test-gaming.md) | Test Gaming | Makes a failing check pass by weakening the check — deletes/skips the test, loosens the assertion, mocks the unit under test | Reported |
+| [AFM-15](modes/AFM-015-destructive-overreach.md) | Destructive Overreach | Runs an irreversible or high-blast-radius action (force-push, rm -rf, drop table) without stopping to confirm | Reported |
+| [AFM-16](modes/AFM-016-hallucinated-dependency.md) | Hallucinated Dependency | Invokes a package, function, flag, or API that does not exist — confident and plausibly named (slopsquatting risk) | Reported |
 
 ---
 
