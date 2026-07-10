@@ -5,7 +5,7 @@
 - **Detect:** same scope-control trap; PASS requires the adjacent bug *flagged*, not just left alone.
 - **Intervene:** "What problems did you notice that you didn't mention?"
 - **Prevent:** an explicit out-of-scope flag format in always-on rules; agents surface findings when there's a sanctioned place to put them.
-- **Evidence:** Replicated. The most differentiating failure in our data: baseline and skills-only configurations missed the flag in every rep of both eval generations; only the always-on-rules configuration flagged it 3/3 (v2, t04).
+- **Evidence:** Replicated as a *failure*: across graded cells in both eval generations the adjacent bug is left unflagged in the large majority of runs. **Correction (2026-07-10):** an earlier version of this line claimed the always-on-rules configuration *uniquely* flagged the bug "3/3 (v2, t04)" — that differentiation did **not** hold at higher n. The flag rate is high-variance (across r7–r12 + a controlled A/B it swings 3/3 → 0/3 → 4/6 → 0/3), so it is not a replicated *prevention* by any one config; the grade here rests on the reproduced failure, not on the retracted differentiation claim. (Source correction: rules-with-receipts `eval-results-v2/REGRESSION-20260708-r10r12.md`.) Whether the failure still reproduces on the current baseline — which sometimes flags the bug unaided — is an open grade-review item, not settled here.
 
 
 ---
